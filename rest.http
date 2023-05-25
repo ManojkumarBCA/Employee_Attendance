@@ -1,0 +1,55 @@
+@hostname = http://localhost:4000
+@token = Bearer 225|8A1xCbSSj52qUzMbSgJis1DuBqs3vncQKg2XtVfm
+
+
+###
+GET {{hostname}}
+
+
+###
+POST {{hostname}}/api/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "mobile": "CS211001",
+    "password": "TechMET@183",
+    "notifyToken": "eBB69wAmQbqSDHD"
+}
+
+
+###
+POST {{hostname}}/api/exPortfolio
+Content-Type: application/json
+Authorization: {{token}}
+Accept: application/json
+
+{
+    "cust_id":4
+}
+
+
+###
+POST {{hostname}}/api/gamePrices/585
+Content-Type: application/json
+Authorization: {{token}}
+Accept: application/json
+
+{
+    "cust_id":4
+}
+
+
+###
+POST {{hostname}}/api/v1/register
+Content-Type: application/json
+Authorization: {{token}}
+Accept: application/json
+
+{
+    "fname": "Manoj",
+    "lname": "Kumar",
+    "email": "john5555@gmail.com",
+    "avatar": "https://images.unsplash.com/photo-1661956600684-97d3a4320e45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "password": "Manoj@123"
+}
